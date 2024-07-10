@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.shortcuts import render
 import tmdbsimple as tmdb
+from django.core.cache import cache
 import os
 
 

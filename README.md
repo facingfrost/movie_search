@@ -60,3 +60,18 @@ Query result is rendered by HTML and javascript.
 return render(request, "movie.html", frontend)
 return render(request, "details.html", frontend)
 ```
+
+## Encrypt
+For tmdb api key and Django secret key, python-decouple is used. Keys are stored in .env file.
+
+## Cache
+Use Django-redis for cache.
+```
+given a URL, try finding that page in the cache
+if the page is in the cache:
+    return the cached page
+else:
+    generate the page
+    save the generated page in the cache (for next time)
+    return the generated page
+```
