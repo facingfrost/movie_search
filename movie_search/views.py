@@ -1,11 +1,10 @@
-from configparser import ConfigParser
+from django.conf import settings
 from django.shortcuts import render
 import tmdbsimple as tmdb
 import os
 
-config = ConfigParser()
-config.read('movie_search/config.cfg')
-tmdb.API_KEY = config['tmdb']['API_KEY']
+
+tmdb.API_KEY = settings.API_KEY
 
 # Create your views here.
 def home(request):
